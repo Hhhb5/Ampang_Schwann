@@ -1,0 +1,43 @@
+My code is a rock, paper. and scissors game, I will explain the parts of the code and purposes.
+
+import random
+
+option = ("rock"), ("paper"), ("scissors") - This part of the code is the options that the players can pick, which is rock, paper, and scissors.
+playing = True                               Purpose: The player can choose an option.
+
+
+while playing:
+    
+    player = None
+    computer = random.choice(option) - This part of the code is where the computer will generate a choice randomly and the player can choose between the options
+                                       computer = random.choice(options) = the part of the code where the bot can generate a random choice from rock, paper and scissors.
+                                       Purpose: The player can choose within the options and the bot will generate a random choice within the options.
+
+    while player not in option:
+        player = input("Enter a choice(rock,paper,scissors): ") - This part is where if the player does not choose within the options it will not generate a result though the computer will
+                                                                generate a response (example: computer: rock) it will not give a result like You win! or You lose! it will make you choose again
+                                                                                              player: gun   ) from rock, paper, and scissors.   
+                                                                  Purpose: For that the player cant type anything else and only within the options.
+
+
+        print(f"Player: {player}")
+        print(f"Computer: {computer}") - This part of code is using f-strings (formatted string literals) in Python to print the values of the variables player and computer in a formatted way.
+                                         Purpose: To print the values of the player and computer.
+
+    if player == computer:
+       print("Its a tie!")
+    elif player == "rock" and computer == "paper":
+       print("You lose!")
+    elif player == "scissors" and computer == "paper":  - This part of the code are the results for a specfic combination(Example is if you pull in rock, and the computer is rock its a tie)
+       print("You win")                                   Purpose: To have a result after each round
+       print("You lose!")
+    elif player == "scissors" and computer == "rock":
+       print("You lose!")
+    else:
+        print("You lose!")
+
+    play_again = input("Play Again? (y/n) ").lower() - This part is after the result. After showing the result like You lose! and You win! you get the option to play again, though a bit bugged because
+    if not play_again == "y":                          even if you choose "n" you will still be forced to play
+       running = False                                 Purpose: For the player to pick an option to continue or no
+
+       #Na late ako haha
